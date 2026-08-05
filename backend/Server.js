@@ -19,7 +19,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://imagegenerateai.onrender.com"
+  "https://aiimagegenerate-wzny.onrender.com"
 ];
 
 app.use(cors({
@@ -32,8 +32,6 @@ app.use(cors({
   },
   credentials: true
 }));
-
-
 
 app.use(express.json());
 
