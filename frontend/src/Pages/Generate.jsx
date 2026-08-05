@@ -180,7 +180,7 @@ const Generate = () => {
 
 const creditRes = async () => {
   return await axios.get(
-    "http://localhost:3000/api/generate/credit",
+    `${API_BASE}/api/generate/credit`,
     {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
