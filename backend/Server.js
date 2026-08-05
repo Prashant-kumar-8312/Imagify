@@ -22,8 +22,17 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors());
 
+
+// app.use(cors({
+//   origin: 'https://imagegenerateai.onrender.com', // your static site URL
+//   credentials: true
+// }));
+
+
+// app.use(cors());
+
+app.use(cors({ origin: 'https://imagegenerateai.onrender.com' }));
 
 
 dotenv.config();

@@ -63,6 +63,8 @@ const Signup = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
 
+ // console.log("signup data " , form);
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setForm((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
@@ -102,6 +104,8 @@ const Signup = () => {
         password: form.password,
       });
 
+    //  console.log("Registration response:", res.data);
+
       if (res.data.token) {
         localStorage.setItem("token", res.data.token);
       }
@@ -112,6 +116,7 @@ const Signup = () => {
 
       navigate("/login");
     } catch (err) {
+    //  console.error("Registration error:", err);
       setError(
         err.response?.data?.message ||
         err.response?.data?.error ||

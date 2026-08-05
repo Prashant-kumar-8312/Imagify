@@ -46,7 +46,7 @@ const NavBar = () => {
 
    const { user } = useAuth();
 
-   console.log("User in NavBar:", user);
+  //  console.log("User in NavBar:", user);
 
   //   useEffect(() => {
   //   const fetchUser = async () => {

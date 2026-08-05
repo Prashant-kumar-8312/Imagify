@@ -51,11 +51,13 @@ const STYLES = ["Natural", "Cinematic", "Illustration", "Black & white"];
 // }
 
 
+const API_BASE = import.meta.env?.VITE_API_BASE || "http://localhost:3000";
+
 
 
 
 export async function generateImage({ prompt, aspect, style }) {
-  console.log("Generating image with prompt:", prompt, "aspect:", aspect, "style:", style);
+ //  console.log("Generating image with prompt:", prompt, "aspect:", aspect, "style:", style);
 
  
 
@@ -68,7 +70,7 @@ export async function generateImage({ prompt, aspect, style }) {
 
 
   const response = await axios.post(
-  "http://localhost:3000/api/generate",
+  `${API_BASE}/api/generate`,
   { prompt, aspect, style },
   {
     responseType: "blob",
